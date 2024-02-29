@@ -1,0 +1,87 @@
+body {
+    background-color: rgb(255, 102, 0);
+}
+
+/* Styles for the main navigation items */
+ul {
+    list-style-type: none;
+    margin: 1%;
+    padding: 30px;
+    background-color: #333;
+    width: 50%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 24px;
+    text-align: center;
+}
+
+li {
+    display: inline-block;
+    margin-right: 40px;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    width: 115px; /* Adjusted width to automatically fit content */
+}
+
+/* Adjusted width for specific list items */
+li:nth-child(1),
+li:nth-child(2),
+li:nth-child(3),
+li:nth-child(4) {
+    width: 200px; /* Adjusted width for HOME and TUTORIALS */
+}
+
+.dropdown-toggle {
+    margin-right: 30px;
+}
+
+.dropdown, .dropdown1 {
+    display: none;
+    position: absolute;
+    background-color: blue;
+    border-radius: 0 0 5px 5px;
+    left: 0;
+    margin-top: 30px;
+    width: 200px; /* Match the width of the "TUTORIALS" navigation item */
+}
+
+.dropdown1 {
+    background-color: violet;
+    left: 100%;
+    margin-top: -30px;
+    margin-left: 30px;
+}
+
+ul ul li {
+    color: #fff;
+}
+
+ul ul ul li {
+    color: #333;
+}
+
+/* Show the dropdown when clicked */
+.show {
+    display: block;
+}
+
+/* Hover effect for the dropdown items */
+ul ul li:hover {
+    background-color: #aeefff;
+    color: #fff;
+}
+
+/* Pointer icon for the TUTORIALS dropdown */
+.dropdown-toggle::after {
+    content: '\25BE'; /* Downward-pointing triangle character */
+    position: absolute;
+    top: 0;
+    margin-left: 2px;
+    color: white;
+}
+
+/* Hover effect for the "Web Design" dropdown */
+li:nth-child(3):hover .dropdown1 {
+    display: block;
+    right: 0;
+}
